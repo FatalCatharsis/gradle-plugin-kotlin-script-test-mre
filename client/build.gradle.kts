@@ -1,12 +1,19 @@
-import github.fatalcatharsis.testPlugin
-
 plugins {
+    id("org.jetbrains.kotlin.jvm").version("1.8.20")
     id("github.fatalcatharsis.test-plugin")
 }
 
 group = "github.fatalcatharsis"
-version = "1.0-SNAPSHOT"
 
 testPlugin {
     file.set(projectDir.resolve("example.test.kts"))
+}
+
+
+dependencies {
+    //implementation("github.fatalcatharsis:script-definition")
+}
+
+repositories {
+    mavenCentral()
 }
