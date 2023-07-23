@@ -1,5 +1,3 @@
-includeBuild("../script-definition")
-
 pluginManagement {
     repositories {
         mavenCentral()

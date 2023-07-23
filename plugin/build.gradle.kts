@@ -1,9 +1,9 @@
 plugins {
-    `kotlin-dsl`
+    id("org.jetbrains.kotlin.jvm").version("1.8.20")
+    id("java-gradle-plugin")
 }
 
 group = "github.fatalcatharsis"
-version = "1.0-SNAPSHOT"
 
 dependencies {
     implementation(gradleApi())
@@ -11,7 +11,12 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-scripting-common")
     implementation("org.jetbrains.kotlin:kotlin-scripting-jvm")
     implementation("org.jetbrains.kotlin:kotlin-scripting-jvm-host")
-    implementation("github.fatalcatharsis:script-definition")
+    implementation("org.jetbrains.kotlin:kotlin-scripting-common")
+    implementation("org.jetbrains.kotlin:kotlin-scripting-jvm")
+    implementation("org.jetbrains.kotlin:kotlin-scripting-dependencies")
+    implementation("org.jetbrains.kotlin:kotlin-scripting-dependencies-maven")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+    implementation("org.jetbrains.kotlin:kotlin-test")
 }
 
 gradlePlugin {
